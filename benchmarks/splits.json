@@ -1,0 +1,32 @@
+{
+  "level0_core": {
+    "level": 0,
+    "description": "Core Lean 4 only (no Mathlib): Nat arithmetic, logic, lists. Fast compiles; the V0.1 milestone target.",
+    "status": "solved",
+    "kind": "theorem",
+    "files": [
+      "level0_core/NatArith.lean",
+      "level0_core/Logic.lean",
+      "level0_core/Lists.lean"
+    ]
+  },
+  "level1_mathlib": {
+    "level": 1,
+    "description": "Elementary algebra/order over ℤ, ℚ, ℕ with narrow Mathlib tactic imports (ring, linarith, norm_num, positivity).",
+    "status": "solved",
+    "kind": "theorem",
+    "files": [
+      "level1_mathlib/IntRatAlgebra.lean"
+    ]
+  },
+  "erdos_auxiliary": {
+    "level": 6,
+    "description": "Known results surrounding Erdős problems (finite cases, bounds, equivalences); see benchmarks/erdos/README.md.",
+    "status": "solved",
+    "kind": "auxiliary",
+    "tags": ["erdos"],
+    "files": [
+      "erdos/Erdos169Aux.lean"
+    ]
+  }
+}

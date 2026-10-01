@@ -1,0 +1,10 @@
+# Benchmark configuration. Splits are defined in benchmarks/splits.json.
+default_split: level0_core
+
+# Output root for benchmark runs (one sub-directory per run).
+reports_dir: reports/runs
+
+# Stop a benchmark run early after this many consecutive infrastructure
+# failures (Lean process missing, compile timeouts, ...). Proof failures do
+# not count.
+max_infra_failures: 3
