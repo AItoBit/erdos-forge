@@ -1,0 +1,2238 @@
+{
+  "run_id": "baseline-level0-heuristic",
+  "split": "level0_core",
+  "level": 0,
+  "model": "heuristic",
+  "strategy": "repair",
+  "max_repairs": 3,
+  "lean_project": "C:\\Users\\Usuario\\Downloads\\formal-conjectures-green65",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "started_at": "2026-10-01T07:29:31",
+  "finished_at": "2026-10-01T07:32:24",
+  "problems_total": 29,
+  "metrics": {
+    "problems": 29,
+    "verified": 21,
+    "verified_solve_rate": 0.7241,
+    "first_attempt_solve_rate": 0.7241,
+    "repair_success_rate": 0.0,
+    "compiler_calls_total": 74,
+    "compiler_calls_per_problem": 2.55,
+    "llm_calls_per_problem": 1.83,
+    "prompt_tokens_total": 0,
+    "completion_tokens_total": 0,
+    "tokens_per_problem": 0,
+    "wall_seconds_total": 172.8,
+    "wall_seconds_per_problem": 5.96,
+    "outcomes": {
+      "verified": 21,
+      "failed": 8
+    },
+    "error_categories": {
+      "tactic_failure": 29,
+      "unsolved_goals": 2,
+      "elaboration": 1
+    }
+  },
+  "results": [
+    {
+      "problem_id": "NatArith:add_zero_right",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem add_zero_right (n : Nat) : n + 0 = n := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 8456.8,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 1945.5
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 1716.3,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.2,
+          "verified": true,
+          "main_declaration": "theorem add_zero_right (n : Nat) : n + 0 = n := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:zero_add_left",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem zero_add_left (n : Nat) : 0 + n = n := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 3555.8,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2092.5
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 1457.7,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem zero_add_left (n : Nat) : 0 + n = n := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:add_comm'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem add_comm' (a b : Nat) : a + b = b + a := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 3554.4,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 1756.9
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 1793.8,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem add_comm' (a b : Nat) : a + b = b + a := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:le_add_right'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem le_add_right' (a b : Nat) : a ≤ a + b := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 3395.1,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 1950.8
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 1441.7,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": true,
+          "main_declaration": "theorem le_add_right' (a b : Nat) : a ≤ a + b := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:double_le",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem double_le (a b : Nat) (h : a ≤ b) : 2 * a ≤ 2 * b := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 2995.7,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 1434.9
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 1558.2,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem double_le (a b : Nat) (h : a ≤ b) : 2 * a ≤ 2 * b := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:succ_ne_zero'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem succ_ne_zero' (n : Nat) : n + 1 ≠ 0 := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 3043.5,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 1592.0
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 1449.4,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": true,
+          "main_declaration": "theorem succ_ne_zero' (n : Nat) : n + 1 ≠ 0 := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:mul_comm'",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: tactic_failure",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 6320.7,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1473.2,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 6,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem mul_comm' (a b : Nat) : a * b = b * a := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1384.6,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem mul_comm' (a b : Nat) : a * b = b * a := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1454.7,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 2,
+              "identifier": null,
+              "headline": "Tactic `constructor` failed: no applicable constructor found",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem mul_comm' (a b : Nat) : a * b = b * a := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1996.8,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 2,
+              "identifier": null,
+              "headline": "simp_all made no progress",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem mul_comm' (a b : Nat) : a * b = b * a := by\n  intros\n  simp_all\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:lt_of_lt_of_le'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem lt_of_lt_of_le' (a b c : Nat) (h₁ : a < b) (h₂ : b ≤ c) : a < c := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 5775.8,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 3369.1
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2402.3,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem lt_of_lt_of_le' (a b c : Nat) (h₁ : a < b) (h₂ : b ≤ c) : a < c := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:mod_two_cases",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem mod_two_cases (n : Nat) : n % 2 = 0 ∨ n % 2 = 1 := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4327.4,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 1968.2
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2355.7,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem mod_two_cases (n : Nat) : n % 2 = 0 ∨ n % 2 = 1 := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:exists_gt'",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: tactic_failure",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 7612.7,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1893.0,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 6,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem exists_gt' (n : Nat) : ∃ m, n < m := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1733.7,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem exists_gt' (n : Nat) : ∃ m, n < m := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1996.2,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 67,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem exists_gt' (n : Nat) : ∃ m, n < m := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1972.1,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 2,
+              "identifier": null,
+              "headline": "simp_all made no progress",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem exists_gt' (n : Nat) : ∃ m, n < m := by\n  intros\n  simp_all\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:sq_eq_mul",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: tactic_failure",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 8779.5,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1728.5,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 6,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_eq_mul (n : Nat) : n ^ 2 = n * n := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1696.2,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_eq_mul (n : Nat) : n ^ 2 = n * n := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1780.4,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 2,
+              "identifier": null,
+              "headline": "Tactic `constructor` failed: no applicable constructor found",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem sq_eq_mul (n : Nat) : n ^ 2 = n * n := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 3559.8,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 2,
+              "identifier": null,
+              "headline": "simp_all made no progress",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_eq_mul (n : Nat) : n ^ 2 = n * n := by\n  intros\n  simp_all\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:sumTo_zero",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem sumTo_zero : sumTo 0 = 0 := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 9182.4,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 3737.7
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 5434.2,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem sumTo_zero : sumTo 0 = 0 := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:sumTo_ge",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: tactic_failure",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 8837.3,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2371.8,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 10,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sumTo_ge (n : Nat) : n ≤ sumTo n := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2152.1,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 11,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem sumTo_ge (n : Nat) : n ≤ sumTo n := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2129.1,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 11,
+              "column": 2,
+              "identifier": null,
+              "headline": "Tactic `constructor` failed: no applicable constructor found",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem sumTo_ge (n : Nat) : n ≤ sumTo n := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2170.9,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 11,
+              "column": 2,
+              "identifier": null,
+              "headline": "simp_all made no progress",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem sumTo_ge (n : Nat) : n ≤ sumTo n := by\n  intros\n  simp_all\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "NatArith:sumTo_formula",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: tactic_failure",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 10508.6,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2016.2,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 10,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sumTo_formula (n : Nat) : 2 * sumTo n = n * (n + 1) := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2646.6,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 11,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem sumTo_formula (n : Nat) : 2 * sumTo n = n * (n + 1) := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 3025.9,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 11,
+              "column": 2,
+              "identifier": null,
+              "headline": "Tactic `constructor` failed: no applicable constructor found",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sumTo_formula (n : Nat) : 2 * sumTo n = n * (n + 1) := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2806.9,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 11,
+              "column": 2,
+              "identifier": null,
+              "headline": "simp_all made no progress",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sumTo_formula (n : Nat) : 2 * sumTo n = n * (n + 1) := by\n  intros\n  simp_all\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Logic:and_swap'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem and_swap' (p q : Prop) (h : p ∧ q) : q ∧ p := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 5759.1,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2767.3
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2986.9,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem and_swap' (p q : Prop) (h : p ∧ q) : q ∧ p := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Logic:or_swap'",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: tactic_failure",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 11554.1,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 3663.4,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 6,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem or_swap' (p q : Prop) (h : p ∨ q) : q ∨ p := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2847.1,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem or_swap' (p q : Prop) (h : p ∨ q) : q ∨ p := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2467.2,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 67,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem or_swap' (p q : Prop) (h : p ∨ q) : q ∨ p := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2560.4,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 2,
+              "identifier": null,
+              "headline": "simp_all made no progress",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem or_swap' (p q : Prop) (h : p ∨ q) : q ∨ p := by\n  intros\n  simp_all\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Logic:imp_trans'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem imp_trans' (p q r : Prop) (hpq : p → q) (hqr : q → r) : p → r := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 5456.7,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2976.2
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2475.3,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": true,
+          "main_declaration": "theorem imp_trans' (p q r : Prop) (hpq : p → q) (hqr : q → r) : p → r := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Logic:not_not_intro'",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: elaboration",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 8333.7,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2542.9,
+          "error_categories": [
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 5,
+              "column": 52,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem not_not_intro' (p : Prop) (hp : p) : ¬¬p := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1874.4,
+          "error_categories": [
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 5,
+              "column": 52,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem not_not_intro' (p : Prop) (hp : p) : ¬¬p := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1992.2,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 2,
+              "identifier": null,
+              "headline": "Tactic `constructor` failed: target is not an inductive datatype",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem not_not_intro' (p : Prop) (hp : p) : ¬¬p := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 1911.3,
+          "error_categories": [
+            "elaboration"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "elaboration",
+              "code": null,
+              "line": 8,
+              "column": 51,
+              "identifier": null,
+              "headline": "No goals to be solved",
+              "goals": 0,
+              "likely_action": "repair"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem not_not_intro' (p : Prop) (hp : p) : ¬¬p := by\n  intros\n  simp_all\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Logic:forall_and_split",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem forall_and_split (α : Type) (p q : α → Prop) (h : ∀ x, p x ∧ q x) :\n    (∀ x, p x) ∧ (∀ x, q x) := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4284.0,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2221.1
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2060.1,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem forall_and_split (α : Type) (p q : α → Prop) (h : ∀ x, p x ∧ q x) :\n    (∀ x, p x) ∧ (∀ x, q x) := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Logic:exists_imp'",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: tactic_failure",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 10751.7,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 3065.6,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 7,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem exists_imp' (α : Type) (p q : α → Prop) (h : ∀ x, p x → q x) (hx : ∃ x, p x) :\n    ∃ x, q x := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2714.0,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 8,
+              "column": 51,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem exists_imp' (α : Type) (p q : α → Prop) (h : ∀ x, p x → q x) (hx : ∃ x, p x) :\n    ∃ x, q x := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2685.4,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 8,
+              "column": 67,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            },
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 8,
+              "column": 67,
+              "identifier": null,
+              "headline": "Tactic `assumption` failed",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem exists_imp' (α : Type) (p q : α → Prop) (h : ∀ x, p x → q x) (hx : ∃ x, p x) :\n    ∃ x, q x := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 2266.3,
+          "error_categories": [
+            "tactic_failure"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "tactic_failure",
+              "code": null,
+              "line": 8,
+              "column": 2,
+              "identifier": null,
+              "headline": "simp_all made no progress",
+              "goals": 0,
+              "likely_action": "try_alternative_tactic"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem exists_imp' (α : Type) (p q : α → Prop) (h : ∀ x, p x → q x) (hx : ∃ x, p x) :\n    ∃ x, q x := by\n  intros\n  simp_all\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Logic:iff_symm'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem iff_symm' (p q : Prop) (h : p ↔ q) : q ↔ p := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4375.5,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2179.7
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2190.2,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem iff_symm' (p q : Prop) (h : p ↔ q) : q ↔ p := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Logic:de_morgan_or",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem de_morgan_or (p q : Prop) (h : ¬(p ∨ q)) : ¬p ∧ ¬q := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4151.8,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2097.3
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2052.2,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": true,
+          "main_declaration": "theorem de_morgan_or (p q : Prop) (h : ¬(p ∨ q)) : ¬p ∧ ¬q := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Lists:length_append'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem length_append' (α : Type) (xs ys : List α) :\n    (xs ++ ys).length = xs.length + ys.length := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4645.2,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2695.1
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 1947.5,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem length_append' (α : Type) (xs ys : List α) :\n    (xs ++ ys).length = xs.length + ys.length := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Lists:reverse_reverse'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem reverse_reverse' (α : Type) (xs : List α) : xs.reverse.reverse = xs := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4891.5,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2239.2
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2649.9,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": true,
+          "main_declaration": "theorem reverse_reverse' (α : Type) (xs : List α) : xs.reverse.reverse = xs := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Lists:map_length'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem map_length' (α β : Type) (f : α → β) (xs : List α) : (xs.map f).length = xs.length := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4277.0,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2128.7
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2145.6,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem map_length' (α β : Type) (f : α → β) (xs : List α) : (xs.map f).length = xs.length := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Lists:length_cons'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem length_cons' (α : Type) (x : α) (xs : List α) : (x :: xs).length = xs.length + 1 := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4669.7,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2271.2
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2396.1,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem length_cons' (α : Type) (x : α) (xs : List α) : (x :: xs).length = xs.length + 1 := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Lists:mem_cons_self'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem mem_cons_self' (α : Type) (x : α) (xs : List α) : x ∈ x :: xs := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4262.0,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2159.5
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2100.2,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": true,
+          "main_declaration": "theorem mem_cons_self' (α : Type) (x : α) (xs : List α) : x ∈ x :: xs := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Lists:append_nil'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem append_nil' (α : Type) (xs : List α) : xs ++ [] = xs := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4563.0,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2483.1
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2077.4,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem append_nil' (α : Type) (xs : List α) : xs ++ [] = xs := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "Lists:length_replicate'",
+      "success": true,
+      "outcome": "verified",
+      "failure_reason": null,
+      "proof": "theorem length_replicate' (α : Type) (n : Nat) (x : α) : (List.replicate n x).length = n := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+      "preamble": "",
+      "axioms": [
+        "propext"
+      ],
+      "compiler_calls": 2,
+      "repairs": 0,
+      "llm_calls": 1,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 4506.7,
+      "model": "heuristic",
+      "verification": {
+        "ok": true,
+        "reasons": [],
+        "axioms": [
+          "propext"
+        ],
+        "forbidden": [],
+        "exit_code": 0,
+        "duration_ms": 2107.1
+      },
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": true,
+          "exit_code": 0,
+          "compile_ms": 2396.7,
+          "error_categories": [],
+          "diagnostics": [],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": true,
+          "main_declaration": "theorem length_replicate' (α : Type) (n : Nat) (x : α) : (List.replicate n x).length = n := by\n  first | rfl | decide | omega | simp | simp_all | trivial",
+          "preamble": ""
+        }
+      ]
+    }
+  ]
+}

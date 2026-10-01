@@ -1,0 +1,2188 @@
+{
+  "run_id": "baseline-level1-heuristic",
+  "split": "level1_mathlib",
+  "level": 1,
+  "model": "heuristic",
+  "strategy": "repair",
+  "max_repairs": 3,
+  "lean_project": "C:\\Users\\Usuario\\Downloads\\formal-conjectures-green65",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "started_at": "2026-10-01T07:33:12",
+  "finished_at": "2026-10-01T07:53:03",
+  "problems_total": 13,
+  "metrics": {
+    "problems": 13,
+    "verified": 0,
+    "verified_solve_rate": 0.0,
+    "first_attempt_solve_rate": 0.0,
+    "repair_success_rate": 0.0,
+    "compiler_calls_total": 52,
+    "compiler_calls_per_problem": 4,
+    "llm_calls_per_problem": 4,
+    "prompt_tokens_total": 0,
+    "completion_tokens_total": 0,
+    "tokens_per_problem": 0,
+    "wall_seconds_total": 1190.7,
+    "wall_seconds_per_problem": 91.6,
+    "outcomes": {
+      "failed": 13
+    },
+    "error_categories": {
+      "unknown_tactic": 52,
+      "unsolved_goals": 20
+    }
+  },
+  "results": [
+    {
+      "problem_id": "IntRatAlgebra:sq_nonneg_int",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 120206.7,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 50165.0,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 45,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.2,
+          "verified": null,
+          "main_declaration": "theorem sq_nonneg_int (x : ℤ) : 0 ≤ x ^ 2 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 21372.6,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 45,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_nonneg_int (x : ℤ) : 0 ≤ x ^ 2 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16396.9,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_nonneg_int (x : ℤ) : 0 ≤ x ^ 2 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15241.0,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_nonneg_int (x : ℤ) : 0 ≤ x ^ 2 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:add_sq_int",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 94813.7,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 18199.4,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 74,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem add_sq_int (a b : ℤ) : (a + b) ^ 2 = a ^ 2 + 2 * a * b + b ^ 2 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 21630.1,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 74,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem add_sq_int (a b : ℤ) : (a + b) ^ 2 = a ^ 2 + 2 * a * b + b ^ 2 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 35352.5,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem add_sq_int (a b : ℤ) : (a + b) ^ 2 = a ^ 2 + 2 * a * b + b ^ 2 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 19613.2,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.2,
+          "verified": null,
+          "main_declaration": "theorem add_sq_int (a b : ℤ) : (a + b) ^ 2 = a ^ 2 + 2 * a * b + b ^ 2 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:sub_sq_int",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 70583.5,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 17539.7,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 74,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sub_sq_int (a b : ℤ) : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 22398.6,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 74,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sub_sq_int (a b : ℤ) : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 17166.9,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sub_sq_int (a b : ℤ) : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 13420.8,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 25.5,
+          "verified": null,
+          "main_declaration": "theorem sub_sq_int (a b : ℤ) : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:cube_succ_int",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 62454.0,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16529.7,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 79,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.2,
+          "verified": null,
+          "main_declaration": "theorem cube_succ_int (a : ℤ) : (a + 1) ^ 3 = a ^ 3 + 3 * a ^ 2 + 3 * a + 1 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15575.7,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 79,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.7,
+          "verified": null,
+          "main_declaration": "theorem cube_succ_int (a : ℤ) : (a + 1) ^ 3 = a ^ 3 + 3 * a ^ 2 + 3 * a + 1 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 14677.7,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem cube_succ_int (a : ℤ) : (a + 1) ^ 3 = a ^ 3 + 3 * a ^ 2 + 3 * a + 1 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15645.5,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem cube_succ_int (a : ℤ) : (a + 1) ^ 3 = a ^ 3 + 3 * a ^ 2 + 3 * a + 1 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:two_mul_le_rat",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 70432.5,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 23362.8,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 64,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem two_mul_le_rat (a b : ℚ) (h : a ≤ b) : 2 * a ≤ a + b := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 14934.8,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 64,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem two_mul_le_rat (a b : ℚ) (h : a ≤ b) : 2 * a ≤ a + b := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15433.4,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.2,
+          "verified": null,
+          "main_declaration": "theorem two_mul_le_rat (a b : ℚ) (h : a ≤ b) : 2 * a ≤ a + b := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16685.0,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem two_mul_le_rat (a b : ℚ) (h : a ≤ b) : 2 * a ≤ a + b := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:rat_lt_mid",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 60715.6,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15581.3,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 62,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem rat_lt_mid (a b : ℚ) (h : a < b) : a < (a + b) / 2 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15701.9,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 62,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem rat_lt_mid (a b : ℚ) (h : a < b) : a < (a + b) / 2 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15081.5,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem rat_lt_mid (a b : ℚ) (h : a < b) : a < (a + b) / 2 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 14332.1,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem rat_lt_mid (a b : ℚ) (h : a < b) : a < (a + b) / 2 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:pow_ten_rat",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 61890.3,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16322.7,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem pow_ten_rat : (2 : ℚ) ^ 10 = 1024 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15622.7,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem pow_ten_rat : (2 : ℚ) ^ 10 = 1024 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15275.4,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem pow_ten_rat : (2 : ℚ) ^ 10 = 1024 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 14646.6,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem pow_ten_rat : (2 : ℚ) ^ 10 = 1024 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:div_rat",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 93203.9,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16142.9,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem div_rat : (7 : ℚ) / 2 = 3.5 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 18869.6,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem div_rat : (7 : ℚ) / 2 = 3.5 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 28514.9,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem div_rat : (7 : ℚ) / 2 = 3.5 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 29648.4,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem div_rat : (7 : ℚ) / 2 = 3.5 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:am_gm_two_int",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 65096.3,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15913.3,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 63,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem am_gm_two_int (a b : ℤ) : 2 * a * b ≤ a ^ 2 + b ^ 2 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16469.8,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 63,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem am_gm_two_int (a b : ℤ) : 2 * a * b ≤ a ^ 2 + b ^ 2 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15775.8,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem am_gm_two_int (a b : ℤ) : 2 * a * b ≤ a ^ 2 + b ^ 2 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16893.8,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem am_gm_two_int (a b : ℤ) : 2 * a * b ≤ a ^ 2 + b ^ 2 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:sq_sum_bound_int",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 74045.8,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 14875.2,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 74,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_sum_bound_int (a b : ℤ) : (a + b) ^ 2 ≤ 2 * (a ^ 2 + b ^ 2) := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 20583.4,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 74,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem sq_sum_bound_int (a b : ℤ) : (a + b) ^ 2 ≤ 2 * (a ^ 2 + b ^ 2) := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 22586.7,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_sum_bound_int (a b : ℤ) : (a + b) ^ 2 ≤ 2 * (a ^ 2 + b ^ 2) := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 15984.9,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem sq_sum_bound_int (a b : ℤ) : (a + b) ^ 2 ≤ 2 * (a ^ 2 + b ^ 2) := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:int_mul_pos'",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 68071.6,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16266.1,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem int_mul_pos' (a b : ℤ) (ha : 0 < a) (hb : 0 < b) : 0 < a * b := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16957.4,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem int_mul_pos' (a b : ℤ) (ha : 0 < a) (hb : 0 < b) : 0 < a * b := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 17387.3,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem int_mul_pos' (a b : ℤ) (ha : 0 < a) (hb : 0 < b) : 0 < a * b := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 17442.2,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem int_mul_pos' (a b : ℤ) (ha : 0 < a) (hb : 0 < b) : 0 < a * b := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:nat_sq_ge_four",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 266358.7,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 31353.6,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 58,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem nat_sq_ge_four (n : ℕ) (h : 2 ≤ n) : 4 ≤ n ^ 2 := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 73596.5,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 58,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.0,
+          "verified": null,
+          "main_declaration": "theorem nat_sq_ge_four (n : ℕ) (h : 2 ≤ n) : 4 ≤ n ^ 2 := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 106523.0,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem nat_sq_ge_four (n : ℕ) (h : 2 ≤ n) : 4 ≤ n ^ 2 := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 54837.8,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.2,
+          "verified": null,
+          "main_declaration": "theorem nat_sq_ge_four (n : ℕ) (h : 2 ≤ n) : 4 ≤ n ^ 2 := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    },
+    {
+      "problem_id": "IntRatAlgebra:rat_abs_free",
+      "success": false,
+      "outcome": "failed",
+      "failure_reason": "compile errors: unknown_tactic",
+      "proof": null,
+      "preamble": "",
+      "axioms": [],
+      "compiler_calls": 4,
+      "repairs": 3,
+      "llm_calls": 4,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "wall_ms": 82862.9,
+      "model": "heuristic",
+      "verification": null,
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "generate",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 17062.9,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 11,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 70,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem rat_abs_free (x : ℚ) (hx : 0 ≤ x) (hy : x ≤ 1) : x ^ 2 ≤ x := by\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 1,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 16920.5,
+          "error_categories": [
+            "unknown_tactic",
+            "unsolved_goals"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 132,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            },
+            {
+              "severity": "error",
+              "category": "unsolved_goals",
+              "code": null,
+              "line": 10,
+              "column": 70,
+              "identifier": null,
+              "headline": "unsolved goals",
+              "goals": 1,
+              "likely_action": "continue_proof"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.1,
+          "verified": null,
+          "main_declaration": "theorem rat_abs_free (x : ℚ) (hx : 0 ≤ x) (hy : x ≤ 1) : x ^ 2 ≤ x := by\n  intros\n  first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 2,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 14903.8,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 12,
+              "column": 148,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.3,
+          "verified": null,
+          "main_declaration": "theorem rat_abs_free (x : ℚ) (hx : 0 ≤ x) (hy : x ≤ 1) : x ^ 2 ≤ x := by\n  intros\n  constructor <;> first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        },
+        {
+          "index": 3,
+          "kind": "repair",
+          "extraction_error": null,
+          "forbidden": [],
+          "compiled": true,
+          "compile_ok": false,
+          "exit_code": 1,
+          "compile_ms": 33951.0,
+          "error_categories": [
+            "unknown_tactic"
+          ],
+          "diagnostics": [
+            {
+              "severity": "error",
+              "category": "unknown_tactic",
+              "code": null,
+              "line": 13,
+              "column": 142,
+              "identifier": null,
+              "headline": "unknown tactic",
+              "goals": 0,
+              "likely_action": "fix_tactic_name"
+            }
+          ],
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "model_ms": 0.4,
+          "verified": null,
+          "main_declaration": "theorem rat_abs_free (x : ℚ) (hx : 0 ≤ x) (hy : x ≤ 1) : x ^ 2 ≤ x := by\n  intros\n  simp_all\n  all_goals first | rfl | decide | omega | simp | simp_all | trivial | norm_num | positivity | aesop | tauto | linarith | nlinarith | ring | field_simp",
+          "preamble": ""
+        }
+      ]
+    }
+  ]
+}

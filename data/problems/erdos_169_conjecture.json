@@ -1,0 +1,10 @@
+{
+  "id": "erdos_169_conjecture",
+  "target": "../../benchmarks/erdos/Erdos169Conjecture.lean:erdos_169",
+  "status": "open",
+  "kind": "conjecture",
+  "level": 6,
+  "tags": ["erdos-169", "additive-combinatorics", "van-der-waerden"],
+  "source": "Erdős Problem 169 (https://www.erdosproblems.com/169)",
+  "notes": "OPEN. The agent may only check that the statement elaborates (`erdos-forge prove` reports `guarded` + `statement_ok`). Requires `import Mathlib`."
+}

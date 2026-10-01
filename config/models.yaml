@@ -1,0 +1,39 @@
+# Model registry. A model spec on the command line is either an alias defined
+# here (e.g. `--model gpt`) or an inline `provider:model_name` string
+# (e.g. `--model openai:gpt-4.1`). Secrets always come from the environment.
+#
+# Providers:
+#   openai     OpenAI-compatible chat completions (OpenAI, vLLM, Ollama, ...)
+#              env: OPENAI_API_KEY, OPENAI_BASE_URL
+#   anthropic  Anthropic Messages API           env: ANTHROPIC_API_KEY
+#   heuristic  no LLM; cycles through closing tactics (offline baseline)
+#   mock       scripted responses (tests)
+#   local      OpenAI-compatible server (vLLM / Ollama / llama.cpp)
+#   ensemble   comma-separated model specs, compiled as a candidate pool
+
+default: heuristic
+
+defaults:
+  temperature: 0.2
+  max_tokens: 2048
+  timeout: 180
+
+aliases:
+  gpt:
+    provider: openai
+    model: gpt-4.1
+  gpt-mini:
+    provider: openai
+    model: gpt-4.1-mini
+  claude:
+    provider: anthropic
+    model: claude-sonnet-4-5
+  local:
+    provider: local
+    model: deepseek-prover-v2
+    base_url: http://localhost:8000/v1
+  heuristic:
+    provider: heuristic
+  ensemble:
+    provider: ensemble
+    model: gpt,claude

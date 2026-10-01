@@ -1,0 +1,31 @@
+# Lean environment configuration.
+#
+# `project_dir` must be a Lake project whose dependencies (Mathlib, ...) are
+# already built. Every compile goes through `lake env lean <file>` executed
+# from that directory, so the toolchain pinned in its `lean-toolchain` wins.
+#
+# Override with the ERDOS_FORGE_LEAN_PROJECT environment variable, e.g. to
+# reuse an existing formal-conjectures checkout with a built Mathlib cache.
+project_dir: workspace/lean_project
+
+# Command used to compile a single file (arguments are appended). Used as the
+# fallback when the Lake environment cannot be resolved.
+lean_command: ["lake", "env", "lean"]
+
+# Resolve `lake env` once per process and call the toolchain's `lean` directly
+# with that environment. Avoids ~20 s of Lake workspace loading per compile on
+# slow machines; every compile is still a fresh `lean` process.
+cache_lake_env: true
+
+# Hard wall-clock limit for one compile, in seconds. `import Mathlib` can be
+# slow on a cold disk; narrow imports compile in a few seconds.
+compile_timeout: 900
+
+# Lean option injected at the top of every assembled file.
+max_heartbeats: 400000
+
+# Where temporary .lean files are written (relative to the repo root).
+scratch_dir: workspace/scratch
+
+# Axioms a verified proof may depend on. Anything else is a firewall failure.
+allowed_axioms: ["propext", "Classical.choice", "Quot.sound"]

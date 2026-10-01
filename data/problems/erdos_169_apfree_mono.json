@@ -1,0 +1,10 @@
+{
+  "id": "erdos_169_apfree_mono",
+  "target": "../../benchmarks/erdos/Erdos169Aux.lean:apFree_mono",
+  "status": "solved",
+  "kind": "auxiliary",
+  "level": 6,
+  "tags": ["erdos-169", "additive-combinatorics", "arithmetic-progressions"],
+  "source": "Erdős Problem 169 (https://www.erdosproblems.com/169); formal-conjectures FormalConjectures/ErdosProblems/169.lean",
+  "notes": "AP-freeness is inherited by subsets. Elementary; the surrounding conjecture (f(k)/log W(k) -> infinity) is open and must never be targeted for proof."
+}

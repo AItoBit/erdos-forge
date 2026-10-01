@@ -1,0 +1,40 @@
+# Proof-search configuration.
+#
+# V0.1/V0.3 implement the whole-proof repair loop (`repair` strategy) plus
+# Mathlib/core retrieval. The beam / best-first / MCTS sections are reserved
+# for later roadmap versions and are read but not yet acted upon.
+
+strategy: repair
+
+repair:
+  # LLM calls per problem = 1 initial generation + at most this many repairs.
+  max_repairs: 3
+  # Number of candidate proofs requested per LLM call. Every distinct sample
+  # is extracted and compiled; Lean is the filter.
+  samples_per_call: 1
+  # Compact the compiler output to at most this many characters before it is
+  # shown to the model.
+  feedback_max_chars: 3000
+
+retrieval:
+  enabled: true
+  # Candidates drawn from the index before type-aware filtering + rerank.
+  retrieve_k: 50
+  # Declarations that actually reach the LLM prompt.
+  top_k: 10
+  extra_index_dir: data/mathlib_index
+  # Walk a built Mathlib tree only when `erdos-forge index` is invoked.
+  mathlib_cache: data/mathlib_index/mathlib_cache.jsonl
+
+budget:
+  max_compiler_calls: 12
+  max_wall_seconds: 3600
+  max_tokens: 200000
+
+beam:
+  width: 8
+  branching: 8
+  max_depth: 40
+
+best_first:
+  max_nodes: 400

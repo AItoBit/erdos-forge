@@ -1,0 +1,85 @@
+-- NatArith:add_zero_right
+theorem add_zero_right (n : Nat) : n + 0 = n := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- NatArith:zero_add_left
+theorem zero_add_left (n : Nat) : 0 + n = n := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- NatArith:add_comm'
+theorem add_comm' (a b : Nat) : a + b = b + a := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- NatArith:le_add_right'
+theorem le_add_right' (a b : Nat) : a ≤ a + b := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- NatArith:double_le
+theorem double_le (a b : Nat) (h : a ≤ b) : 2 * a ≤ 2 * b := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- NatArith:succ_ne_zero'
+theorem succ_ne_zero' (n : Nat) : n + 1 ≠ 0 := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- NatArith:lt_of_lt_of_le'
+theorem lt_of_lt_of_le' (a b c : Nat) (h₁ : a < b) (h₂ : b ≤ c) : a < c := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- NatArith:mod_two_cases
+theorem mod_two_cases (n : Nat) : n % 2 = 0 ∨ n % 2 = 1 := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- NatArith:sumTo_zero
+theorem sumTo_zero : sumTo 0 = 0 := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Logic:and_swap'
+theorem and_swap' (p q : Prop) (h : p ∧ q) : q ∧ p := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Logic:imp_trans'
+theorem imp_trans' (p q r : Prop) (hpq : p → q) (hqr : q → r) : p → r := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Logic:forall_and_split
+theorem forall_and_split (α : Type) (p q : α → Prop) (h : ∀ x, p x ∧ q x) :
+    (∀ x, p x) ∧ (∀ x, q x) := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Logic:iff_symm'
+theorem iff_symm' (p q : Prop) (h : p ↔ q) : q ↔ p := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Logic:de_morgan_or
+theorem de_morgan_or (p q : Prop) (h : ¬(p ∨ q)) : ¬p ∧ ¬q := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Lists:length_append'
+theorem length_append' (α : Type) (xs ys : List α) :
+    (xs ++ ys).length = xs.length + ys.length := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Lists:reverse_reverse'
+theorem reverse_reverse' (α : Type) (xs : List α) : xs.reverse.reverse = xs := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Lists:map_length'
+theorem map_length' (α β : Type) (f : α → β) (xs : List α) : (xs.map f).length = xs.length := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Lists:length_cons'
+theorem length_cons' (α : Type) (x : α) (xs : List α) : (x :: xs).length = xs.length + 1 := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Lists:mem_cons_self'
+theorem mem_cons_self' (α : Type) (x : α) (xs : List α) : x ∈ x :: xs := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Lists:append_nil'
+theorem append_nil' (α : Type) (xs : List α) : xs ++ [] = xs := by
+  first | rfl | decide | omega | simp | simp_all | trivial
+
+-- Lists:length_replicate'
+theorem length_replicate' (α : Type) (n : Nat) (x : α) : (List.replicate n x).length = n := by
+  first | rfl | decide | omega | simp | simp_all | trivial
